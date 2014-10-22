@@ -1,4 +1,4 @@
-#### Coders
+### Coders
 
 * [Taihei OKI](https://github.com/natrium11321) - The university of Tokyo
 * [Iori YANOKURA](https://github.com/iory) - The university of Tokyo
