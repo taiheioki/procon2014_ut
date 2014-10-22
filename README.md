@@ -66,10 +66,10 @@ bin/run_slide -w16 -h16 -a5 -b200 -l8 -s dragon
 
 cmake に渡すことの出来る主なオプションは以下です．以下のオプションの設定はキャッシュされ，変更しない限り持続します．
 
-* -DCMAKE_BUILD_TYPE=<build_type> : ビルドの種類を <build_type> に設定します．
-	* <build_type> = Debug : デバッグビルドを行います．様々なデバッグオプションが ON になり，バグの発見をし易くなりますが，実行速度が極端に落ちます．全ての assert は有効になります．
-	* <build_type> = RelWithDebInfo（デフォルト） : デバッグ情報を残しつつ，最適化をかけます．全ての assert は有効になります．
-	* <build_type> = Release : 最適化を完全に ON にします．最も実行速度が早くなります．全ての assert は無効になります．
-* -DUSE_TC_MALLOC=<value> : ON/1 に設定すると，TC Malloc がインストールされている場合にそれをリンクします．OFF/0 に設定すると，TC Malloc がインストールされている場合でもそれをリンクしません．
-* -DUSE_CPU_PROFILER=<value> : ON/1 に設定すると，gperftool がインストールされている場合に，CPU プロファイラをリンクします．OFF/0 に設定すると，gperftools がインストールされている場合でも CPU プロファイラをリンクしません．
-* -DUSE_FAST_BRANCH=<value> : ON/1 に設定すると，ビルドが高速になりますが，解ける問題のサイズが特定の十数種類に限られます（slide/branch.hpp を参照してください）．OFF/0 に設定すると，ビルドが非常に低速になりますが，2×2 以上 16×16 以下の任意のサイズの問題を解けるようになります．
+* -DCMAKE\_BUILD\_TYPE=&lt;build\_type&gt; : ビルドの種類を &lt;build\_type&gt; に設定します．
+	* &lt;build\_type&gt; = Debug : デバッグビルドを行います．様々なデバッグオプションが ON になり，バグの発見をし易くなりますが，実行速度が極端に落ちます．全ての assert は有効になります．
+	* &lt;build\_type&gt; = RelWithDebInfo（デフォルト） : デバッグ情報を残しつつ，最適化をかけます．全ての assert は有効になります．
+	* &lt;build\_type&gt; = Release : 最適化を完全に ON にします．最も実行速度が早くなります．全ての assert は無効になります．
+* -DUSE\_TC\_MALLOC=&lt;value&gt; : ON/1 に設定すると，TC Malloc がインストールされている場合にそれをリンクします．OFF/0 に設定すると，TC Malloc がインストールされている場合でもそれをリンクしません．
+* -DUSE\_CPU\_PROFILER=&lt;value&gt; : ON/1 に設定すると，gperftool がインストールされている場合に，CPU プロファイラをリンクします．OFF/0 に設定すると，gperftools がインストールされている場合でも CPU プロファイラをリンクしません．
+* -DUSE\_FAST\_BRANCH=&lt;value&gt; : ON/1 に設定すると，ビルドが高速になりますが，解ける問題のサイズが特定の十数種類に限られます（slide/branch.hpp を参照してください）．OFF/0 に設定すると，ビルドが非常に低速になりますが，2×2 以上 16×16 以下の任意のサイズの問題を解けるようになります．
