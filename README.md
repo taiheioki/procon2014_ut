@@ -15,6 +15,9 @@ procon2014_ut
 * [CMake](http://www.cmake.org/)
 * [boost](http://www.boost.org/)
 * [Intel TBB](https://www.threadingbuildingblocks.org/)
+
+以下がインストールされていると，GUI アプリケーションををビルドすることが出来ます．
+
 * [Qt 5](http://qt-project.org/qt5)
 
 以下がインストールされていると，動作が速くなることがあります．
@@ -60,7 +63,7 @@ bin/run_slide -w16 -h16 -a5 -b200 -l8 -s dragon
 
 ### run GUI application
 
-`bin/procon2014-qt-slide` 又は `bin/procon2014-qt-slide.app` はGUI アプリケーションです．直接実行するか，または Mac なら open の引数に渡すことで起動することが出来ます．
+Qt 5 がインストールされている場合は，`bin/procon2014-qt-slide` 又は `bin/procon2014-qt-slide.app` がビルドされます．これらはGUI アプリケーションであり，直接実行するか，または Mac なら open の引数に渡すことで起動することが出来ます．
 
 ### options for CMake
 
