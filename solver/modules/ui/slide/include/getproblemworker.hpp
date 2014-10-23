@@ -8,7 +8,7 @@
 #include <string>
 #include <utility>
 
-#include <boost/network.hpp>
+#include <boost/asio.hpp>
 
 #include "network/ProblemClient.hpp"
 

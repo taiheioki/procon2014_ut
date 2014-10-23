@@ -26,7 +26,9 @@
 #include <QThread>
 #include <QValidator>
 
-#include <boost/network.hpp>
+#include <boost/asio.hpp>
+
+#undef B0
 
 #include "slide/Answer.hpp"
 #include "slide/Problem.hpp"

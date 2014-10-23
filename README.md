@@ -70,6 +70,6 @@ cmake に渡すことの出来る主なオプションは以下です．以下�
 	* &lt;build\_type&gt; = Debug : デバッグビルドを行います．様々なデバッグオプションが ON になり，バグの発見をし易くなりますが，実行速度が極端に落ちます．全ての assert は有効になります．
 	* &lt;build\_type&gt; = RelWithDebInfo（デフォルト） : デバッグ情報を残しつつ，最適化をかけます．全ての assert は有効になります．
 	* &lt;build\_type&gt; = Release : 最適化を完全に ON にします．最も実行速度が早くなります．全ての assert は無効になります．
-* -DUSE\_TC\_MALLOC=&lt;value&gt; : ON/1 に設定すると，TC Malloc がインストールされている場合にそれをリンクします．OFF/0 に設定すると，TC Malloc がインストールされている場合でもそれをリンクしません．
-* -DUSE\_CPU\_PROFILER=&lt;value&gt; : ON/1 に設定すると，gperftool がインストールされている場合に，CPU プロファイラをリンクします．OFF/0 に設定すると，gperftools がインストールされている場合でも CPU プロファイラをリンクしません．
-* -DUSE\_FAST\_BRANCH=&lt;value&gt; : ON/1 に設定すると，ビルドが高速になりますが，解ける問題のサイズが特定の十数種類に限られます（slide/branch.hpp を参照してください）．OFF/0 に設定すると，ビルドが非常に低速になりますが，2×2 以上 16×16 以下の任意のサイズの問題を解けるようになります．
+* -DUSE\_TC\_MALLOC=&lt;value&gt; : ON/1 に設定すると，TC Malloc がインストールされている場合にそれをリンクします．OFF/0 に設定すると，TC Malloc がインストールされている場合でもそれをリンクしません．デフォルトは ON です．
+* -DUSE\_CPU\_PROFILER=&lt;value&gt; : ON/1 に設定すると，gperftool がインストールされている場合に，CPU プロファイラをリンクします．OFF/0 に設定すると，gperftools がインストールされている場合でも CPU プロファイラをリンクしません．デフォルトは OFF です．
+* -DUSE\_FAST\_BRANCH=&lt;value&gt; : ON/1 に設定すると，ビルドが高速になりますが，解ける問題のサイズが特定の十数種類に限られます（slide/branch.hpp を参照してください）．OFF/0 に設定すると，ビルドが非常に低速になりますが，2×2 以上 16×16 以下の任意のサイズの問題を解けるようになります．デフォルトは OFF です．
