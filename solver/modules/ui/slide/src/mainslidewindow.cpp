@@ -28,6 +28,7 @@
 
 #include <boost/asio.hpp>
 
+#pragma push_macro("B0")
 #undef B0
 
 #include "slide/Answer.hpp"
@@ -42,6 +43,9 @@
 #include "slide/KurageSolver.hpp"
 #include "slide/StraightSolver.hpp"
 #include "slide/Solver.hpp"
+
+#pragma pop_macro("B0")
+
 #include "network/ProblemClient.hpp"
 #include "network/PostClient.hpp"
 #include "util/define.hpp"

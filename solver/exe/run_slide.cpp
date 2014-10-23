@@ -30,6 +30,7 @@ struct Config
     int selectionCost;
     int selectionLimit;
     std::string file;
+    int practiceNo;
     bool verbose;
     bool outputAnswer;
     std::unordered_set<std::string> solvers;
@@ -51,6 +52,7 @@ Config parseCommand(int argc, const char* const argv[])
         ("selection_limit,l", po::value<int>(&config.selectionLimit)->default_value(5), "limit time of the selection")
         ("solver,s",          po::value<std::vector<std::string>>(),                    "solver to be used")
         ("file,f",            po::value<std::string>(&config.file)->default_value(""),  "input file")
+        ("practice_no,p",     po::value<int>(&config.practiceNo)->default_value(-1),    "No of practice problem")
         ("verbose,v",                                                                   "A lot printing")
         ("output_answer,o",                                                             "Output answer")
     ;
@@ -79,10 +81,14 @@ Config parseCommand(int argc, const char* const argv[])
 
 slide::Problem setProblem(const Config& config)
 {
-    if(!config.file.empty()){
-        const boost::filesystem::path path = boost::filesystem::path("../resources/slide/") / config.file;
+    if(config.practiceNo != -1){
+        const boost::filesystem::path path = (boost::format("../resources/answer/practice/%02d.txt") % config.practiceNo).str();
         std::cerr << "loading " << path << std::endl;
         return slide::Problem(path);
+    }
+    else if(!config.file.empty()){
+        std::cerr << "loading " << config.file << std::endl;
+        return slide::Problem(config.file);
     }
     else{
         slide::Problem problem(config.H, config.W, config.swappingCost, config.selectionCost, config.selectionLimit);

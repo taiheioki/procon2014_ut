@@ -1,4 +1,6 @@
 add_subdirectory(slide)
 add_subdirectory(util)
-add_subdirectory(ui)
+if(Qt5Widgets_FOUND)
+  add_subdirectory(ui)
+endif()
 add_subdirectory(network)

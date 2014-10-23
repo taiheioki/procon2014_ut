@@ -114,8 +114,12 @@ message(STATUS "Boost include dir = ${Boost_INCLUDE_DIR}")
 
 # Qt5Widgets
 set(CMAKE_PREFIX_PATH /usr/local/opt/qt5)
-find_package(Qt5Widgets REQUIRED)
-message(STATUS "Found 'Qt5 library' ${Qt5Widgets_VERSION}")
+find_package(Qt5Widgets)
+if(Qt5Widgets_FOUND)
+  message(STATUS "Found 'Qt5 library' ${Qt5Widgets_VERSION}")
+else()
+  message(STATUS "Qt5 library is not found")
+endif()
 
 # TBB
 find_package(TBB REQUIRED)
