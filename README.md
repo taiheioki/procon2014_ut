@@ -1,7 +1,10 @@
 procon2014_ut
 =============
 
-高専プロコン2014競技部門の東大チームの公開用レポジトリです．このプロジェクトは MIT License で公開されています．詳しくは LICENSE.md を見てください．解説記事は http://natrium11321.hatenablog.com/entry/2014/10/23/180116 を御覧ください．
+高専プロコン2014競技部門の東大チームの公開用レポジトリです．このプロジェクトは MIT License で公開されています．詳しくは LICENSE.md を見てください．
+
+解説記事は http://natrium11321.hatenablog.com/entry/2014/10/23/180116 を御覧ください．
+
 質問・要望・意見等は [@natrium11321](https://twitter.com/natrium11321) の方までお気軽にどうぞ．
 
 ### environment
